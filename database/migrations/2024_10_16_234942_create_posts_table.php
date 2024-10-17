@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('slug')->unique(); // For SEO-friendly URLs
             $table->boolean('allow_comments')->default(true); // Toggle for comment permissions
             $table->string('tags')->nullable(); // Tags for better categorization (comma-separated)
-            $table->foreignId('created_by')->constrained('users')->onDelete('set null'); // Creator (admin/manager only)
+            $table->foreignId('created_by')->nullable()->constrained('users')->onDelete('set null'); // Creator (admin/manager only)
             $table->foreignId('updated_by')->nullable()->constrained('users')->onDelete('set null'); // Last updater
             $table->timestamp('published_at')->nullable(); // Timestamp for published posts
             $table->unsignedInteger('views')->default(0); // View count tracking

@@ -50,7 +50,7 @@ return new class extends Migration
 
             // Payment and Billing Settings
             $table->string('currency')->default('USD'); // Default currency for transactions
-            $table->decimal('tax_rate', 5, 2)->default(0.00); // Tax rate in percentage
+            $table->string('tax_rate', 50)->default(0.00); // Tax rate in percentage
             $table->boolean('enable_invoice_auto_send')->default(true); // Automatically send invoices
             $table->boolean('enable_recurring_payments')->default(false); // Allow recurring payments
 
