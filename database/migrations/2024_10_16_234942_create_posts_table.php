@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('content'); // Content that supports markdown for code blocks
+            $table->longText('content'); // Content that supports markdown for code blocks
+            $table->string('category'); // category of post
+            $table->string('featuredImage'); // Featured image
             $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Author reference
             $table->enum('status', ['draft', 'published', 'archived'])->default('draft');
             $table->string('slug')->unique(); // For SEO-friendly URLs

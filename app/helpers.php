@@ -54,3 +54,14 @@ if (!function_exists('convertToSlug')) {
         return \Illuminate\Support\Str::slug($text);
     }
 }
+if (!function_exists('latestFromBlog')) {
+    function latestFromBlog(int $take = 5){
+        return \App\Models\Post::where('status','published')->with('user')->latest()->take($take)->get();
+    }
+}
+if (!function_exists('getUserById')) {
+    function getUserById($id){
+        return \App\Models\User::where('id',$id)->with('posts')->first();
+    }
+}
+

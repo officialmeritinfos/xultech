@@ -52,6 +52,7 @@ Route::middleware(['web'])->group(function (){
     Route::prefix('resources')->name('resources.')->group(function (){
         Route::get('index',[ResourcesController::class,'index'])->name('index');
         Route::get('blogs',[ResourcesController::class,'blogPage'])->name('blogs');
+        Route::get('blogs/{slug}',[ResourcesController::class,'blogDetail'])->name('blogDetail');
         Route::get('terms-of-service',[ResourcesController::class,'termsOfService'])->name('termsOfService');
         Route::get('privacy-policy',[ResourcesController::class,'privacyPolicy'])->name('privacyPolicy');
         Route::get('work-process',[ResourcesController::class,'ourWorkProcess'])->name('work-process');
