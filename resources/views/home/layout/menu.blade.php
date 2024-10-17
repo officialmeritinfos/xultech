@@ -22,293 +22,192 @@
                         <div class="mobile-menu-close">&times;</div>
                     </div>
                     <ul class="site-menu-main">
+                        <li class="nav-item">
+                            <a href="{{route('landingPage')}}" class="nav-link-item drop-trigger">Home</a>
+                        </li>
                         <li class="nav-item nav-item-has-children">
-                            <a href="#" class="nav-link-item drop-trigger">Demos<i class="fas fa-angle-down"></i>
-                            </a>
+                            <a href="#" class="nav-link-item drop-trigger">Company<i class="fas fa-angle-down"></i></a>
                             <div class="sub-menu" id="submenu-1">
                                 <ul class="sub-menu_list">
                                     <li class="sub-menu_item">
-                                        <a href="index">
-                                            <span class="menu-item-text">Digital agency</span>
+                                        <a href="{{route('company.aboutUs')}}">
+                                            <span class="menu-item-text">About Us</span>
                                         </a>
                                     </li>
                                     <li class="sub-menu_item">
-                                        <a href="index-2">
-                                            <span class="menu-item-text">Chat software</span>
+                                        <a href="{{route('company.ourTeam')}}">
+                                            <span class="menu-item-text">Our Team</span>
                                         </a>
                                     </li>
                                     <li class="sub-menu_item">
-                                        <a href="index-3">
-                                            <span class="menu-item-text">Fitness App</span>
+                                        <a href="{{route('company.career')}}">
+                                            <span class="menu-item-text">Careers</span>
                                         </a>
                                     </li>
                                     <li class="sub-menu_item">
-                                        <a href="index-4">
-                                            <span class="menu-item-text">Online Courses</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-menu_item">
-                                        <a href="index-5">
-                                            <span class="menu-item-text">SEO Agency</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-menu_item">
-                                        <a href="index-6">
-                                            <span class="menu-item-text">Cold Email</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-menu_item">
-                                        <a href="index-7">
-                                            <span class="menu-item-text">Web Hosting</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-menu_item">
-                                        <a href="index-8">
-                                            <span class="menu-item-text">Startup</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-menu_item">
-                                        <a href="index-9">
-                                            <span class="menu-item-text">Tracking Software</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-menu_item">
-                                        <a href="index-10">
-                                            <span class="menu-item-text">AI Writing Tool</span>
+                                        <a href="{{route('company.contact')}}">
+                                            <span class="menu-item-text">Contact</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a href="about" class="nav-link-item drop-trigger">About Us</a>
-                        </li>
                         <li class="nav-item nav-item-has-children">
-                            <a href="#" class="nav-link-item drop-trigger">Pages<i class="fas fa-angle-down"></i>
+                            <a href="#" class="nav-link-item drop-trigger">Solutions<i class="fas fa-angle-down"></i>
                             </a>
                             <div class="sub-menu" id="submenu-3">
                                 <ul class="sub-menu_list">
-                                    <li class="sub-menu_item nav-item-has-children child-item">
-                                        <a href="#" class="sub-menu__item-link">
-                                            <span class="menu-item-text">Services</span>
-                                            <i class="fas fa-angle-right"></i>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('solutions.uiDesign')}}">
+                                            <span class="menu-item-text">UI/UX Design</span>
                                         </a>
-                                        <div class="sub-menu child-sub" id="submenu-22">
-                                            <ul class="sub-menu_list">
-                                                <li class="sub-menu_item">
-                                                    <a href="service">
-                                                        <span class="menu-item-text">Service</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="service-details">
-                                                        <span class="menu-item-text">Service Details</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </li>
                                     <li class="sub-menu_item">
-                                        <a href="team">
-                                            <span class="menu-item-text">Team</span>
+                                        <a href="{{route('solutions.webDevelopment')}}">
+                                            <span class="menu-item-text">Web Development</span>
                                         </a>
                                     </li>
-                                    <li class="sub-menu_item nav-item-has-children child-item">
-                                        <a class="sub-menu__item-link">
-                                            <span class="menu-item-text">Pricing</span>
-                                            <i class="fas fa-angle-right"></i>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('solutions.mobileDevelopment')}}">
+                                            <span class="menu-item-text">Mobile App Development</span>
                                         </a>
-                                        <div class="sub-menu child-sub" id="submenu-11">
-                                            <ul class="sub-menu_list">
-                                                <li class="sub-menu_item">
-                                                    <a href="pricing">
-                                                        <span class="menu-item-text">Pricing 1</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="pricing-2">
-                                                        <span class="menu-item-text">Pricing 2</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </li>
-                                    <li class="sub-menu_item nav-item-has-children child-item">
-                                        <a class="sub-menu__item-link">
-                                            <span class="menu-item-text">Career</span>
-                                            <i class="fas fa-angle-right"></i>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('solutions.customSoftware')}}">
+                                            <span class="menu-item-text">Custom Software Development</span>
                                         </a>
-                                        <div class="sub-menu child-sub" id="submenu-4">
-                                            <ul class="sub-menu_list">
-                                                <li class="sub-menu_item">
-                                                    <a href="career">
-                                                        <span class="menu-item-text">Career</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="career-details">
-                                                        <span class="menu-item-text">Career Details</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </li>
-                                    <li class="sub-menu_item nav-item-has-children child-item">
-                                        <a class="sub-menu__item-link">
-                                            <span class="menu-item-text">Portfolio</span>
-                                            <i class="fas fa-angle-right"></i>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('solutions.ecommerceSolutions')}}">
+                                            <span class="menu-item-text">E-commerce Solutions</span>
                                         </a>
-                                        <div class="sub-menu child-sub" id="submenu-7">
-                                            <ul class="sub-menu_list">
-                                                <li class="sub-menu_item">
-                                                    <a href="portfolio">
-                                                        <span class="menu-item-text">Portfolio 1 Classic</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="portfolio-2">
-                                                        <span class="menu-item-text">Portfolio 2 Masonry</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="portfolio-3">
-                                                        <span class="menu-item-text">Portfolio 3 Modern</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="portfolio-4">
-                                                        <span class="menu-item-text">Portfolio 4 Minimal</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="portfolio-details">
-                                                        <span class="menu-item-text">Portfolio Details</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </li>
-                                    <li class="sub-menu_item nav-item-has-children child-item">
-                                        <a class="sub-menu__item-link">
-                                            <span class="menu-item-text">Blog</span>
-                                            <i class="fas fa-angle-right"></i>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('solutions.crmSolutions')}}">
+                                            <span class="menu-item-text">CRM Solutions</span>
                                         </a>
-                                        <div class="sub-menu child-sub" id="submenu-12">
-                                            <ul class="sub-menu_list">
-                                                <li class="sub-menu_item">
-                                                    <a href="blog">
-                                                        <span class="menu-item-text">Blog</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="blog-details">
-                                                        <span class="menu-item-text">Blog Details</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </li>
-                                    <li class="sub-menu_item nav-item-has-children child-item">
-                                        <a class="sub-menu__item-link">
-                                            <span class="menu-item-text">Faq</span>
-                                            <i class="fas fa-angle-right"></i>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('solutions.consultingSolutions')}}">
+                                            <span class="menu-item-text">Consulting Solutions</span>
                                         </a>
-                                        <div class="sub-menu child-sub" id="submenu-8">
-                                            <ul class="sub-menu_list">
-                                                <li class="sub-menu_item">
-                                                    <a href="faq">
-                                                        <span class="menu-item-text">FAQ 1</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="faq-2">
-                                                        <span class="menu-item-text">FAQ 2</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="faq-3">
-                                                        <span class="menu-item-text">FAQ 3</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="faq-4">
-                                                        <span class="menu-item-text">FAQ 4</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </li>
-                                    <li class="sub-menu_item nav-item-has-children child-item">
-                                        <a class="sub-menu__item-link">
-                                            <span class="menu-item-text">Utility</span>
-                                            <i class="fas fa-angle-right"></i>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('solutions.businessManagementSolutions')}}">
+                                            <span class="menu-item-text">Business Management Systems</span>
                                         </a>
-                                        <div class="sub-menu child-sub" id="submenu-9">
-                                            <ul class="sub-menu_list">
-                                                <li class="sub-menu_item">
-                                                    <a href="404">
-                                                        <span class="menu-item-text">404</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="coming-soon">
-                                                        <span class="menu-item-text">Coming Soon</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </li>
-                                    <li class="sub-menu_item nav-item-has-children child-item">
-                                        <a class="sub-menu__item-link">
-                                            <span class="menu-item-text">Account</span>
-                                            <i class="fas fa-angle-right"></i>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('solutions.inventory-systems')}}">
+                                            <span class="menu-item-text">Inventory & Sales System</span>
                                         </a>
-                                        <div class="sub-menu child-sub" id="submenu-10">
-                                            <ul class="sub-menu_list">
-                                                <li class="sub-menu_item">
-                                                    <a href="sign-in">
-                                                        <span class="menu-item-text">Sign In</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="sign-up">
-                                                        <span class="menu-item-text">Sign Up</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu_item">
-                                                    <a href="reset-password">
-                                                        <span class="menu-item-text">Reset Password</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </li>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('solutions.schoolSolution')}}">
+                                            <span class="menu-item-text">School Solutions</span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('solutions.bookingSolutions')}}">
+                                            <span class="menu-item-text">Booking Solutions</span>
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item nav-item-has-children">
-                            <a href="#" class="nav-link-item drop-trigger">Contact<i class="fas fa-angle-down"></i>
+                            <a href="#" class="nav-link-item drop-trigger">Industries<i class="fas fa-angle-down"></i>
                             </a>
                             <div class="sub-menu" id="submenu-13">
                                 <ul class="sub-menu_list">
                                     <li class="sub-menu_item">
-                                        <a href="contact">
-                                            <span class="menu-item-text">Contact 1</span>
+                                        <a href="{{route('industry.healthCare')}}">
+                                            <span class="menu-item-text">Healthcare</span>
                                         </a>
                                     </li>
                                     <li class="sub-menu_item">
-                                        <a href="contact-2">
-                                            <span class="menu-item-text">Contact 2</span>
+                                        <a href="{{route('industry.finance')}}">
+                                            <span class="menu-item-text">Finance</span>
                                         </a>
                                     </li>
                                     <li class="sub-menu_item">
-                                        <a href="contact-3">
-                                            <span class="menu-item-text">Contact 3</span>
+                                        <a href="{{route('industry.retail')}}">
+                                            <span class="menu-item-text">Retail</span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('industry.education')}}">
+                                            <span class="menu-item-text">Education</span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('industry.realEstate')}}">
+                                            <span class="menu-item-text">Real Estate</span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('industry.logistics')}}">
+                                            <span class="menu-item-text">Logistics</span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('industry.manufacturing')}}">
+                                            <span class="menu-item-text">Manufacturing</span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('industry.hospitality')}}">
+                                            <span class="menu-item-text">Hospitality</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
+                        <li class="nav-item nav-item-has-children">
+                            <a href="{{route('product.index')}}" class="nav-link-item drop-trigger">Products<i class="fas fa-angle-down"></i>
+                            </a>
+                            <div class="sub-menu" id="submenu-13">
+                                <ul class="sub-menu_list">
+                                    @foreach(ourProducts() as $product)
+                                        <li class="sub-menu_item">
+                                            <a href="{{route('product.detail',['slug'=>convertToSlug($product->name),'id'=>$product->id])}}">
+                                                <span class="menu-item-text">{{$product->name}}</span>
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item nav-item-has-children">
+                            <a href="#" class="nav-link-item drop-trigger">Resources<i class="fas fa-angle-down"></i>
+                            </a>
+                            <div class="sub-menu" id="submenu-13">
+                                <ul class="sub-menu_list">
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('resources.blogs')}}">
+                                            <span class="menu-item-text">Blogs</span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('resources.privacyPolicy')}}">
+                                            <span class="menu-item-text">Privacy Policy</span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('resources.termsOfService')}}">
+                                            <span class="menu-item-text">Terms of Service</span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu_item">
+                                        <a href="{{route('resources.work-process')}}">
+                                            <span class="menu-item-text">Our Work Process</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
                     </ul>
                 </nav>
             </div>
@@ -322,11 +221,8 @@
               Mobile Menu Hamburger Ends
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
             <div class="header-cta-btn-wrapper">
-                <a href="#" class="btn-masco btn-masco--header btn-masco--header-secondary">
-                    <span>Login</span>
-                </a>
-                <a href="#" class="btn-masco btn-masco--header btn-primary-l09 rounded-pill btn-fill--down">
-                    <span>Sign up free</span></a>
+                <a href="{{route('bookUsPage')}}" class="btn-masco btn-masco--header btn-primary-l09 rounded-pill btn-fill--down">
+                    <span>Get Started</span></a>
             </div>
         </nav>
     </div>

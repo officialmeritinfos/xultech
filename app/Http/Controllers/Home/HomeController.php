@@ -15,7 +15,18 @@ class HomeController extends Controller
         $data = [
             'web' => $settings,
             'siteName' => $settings->name,
-            'pageName' => 'Leading Web, Mobile, and Software Development Company in '.getVisitorLocation($request->ip())->countryName,
+            'pageName' => 'Leading Web, Mobile, and Software Development Company in Africa',
+        ];
+        return view('home.home')->with($data);
+    }
+    //booking page
+    public function bookingPage(Request $request)
+    {
+        $settings = GeneralSetting::first();
+        $data = [
+            'web' => $settings,
+            'siteName' => $settings->name,
+            'pageName' => 'Get Started',
         ];
         return view('home.home')->with($data);
     }

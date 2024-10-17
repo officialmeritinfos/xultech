@@ -16,3 +16,4 @@
 <script src="{{asset('home/js/custom.js')}}"></script>
 <!-- Activation Script -->
 @stack('js')
+<script src="{{asset('home/js/typewriter.js')}}"></script>
