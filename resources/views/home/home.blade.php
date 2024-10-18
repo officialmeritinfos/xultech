@@ -108,13 +108,13 @@ Home 9  : Content Section
                         <div class="content-text-block">
                             <h2 class="content-title heading-lg heading-lg--syne text-black-3" style="margin-top: 5rem;">Who We Are: Driven by Innovation, Powered by Passion</h2>
                             <p>
-                                Alright, let’s get straight to it—at XulTech, we’re a crew of tech wizards and idea shapers,
+                                Alright, let’s get straight to it—at {{$siteName}}, we’re a crew of tech wizards and idea shapers,
                                 driven by a shared passion for making life easier and businesses stronger. We take pride
                                 in being your go-to team for all things digital, from whipping up sleek websites to crafting
                                 custom software that feels like it was made just for you (because it is!).
                             </p>
                             <p>
-                                And here’s a fun fact: XulTech isn’t just a catchy name. It stands for
+                                And here’s a fun fact: {{$siteName}} isn’t just a catchy name. It stands for
                                 Xpert Unified Layers Tech—fancy, right? But don’t let the name fool you;
                                 we’re all about making the complex stuff simple. Our “Xpert” team layers tech solutions
                                 to create powerful tools that actually work for you. It’s a bit like building a delicious
@@ -159,14 +159,14 @@ Home 9  : Content Section
                             </h2>
                             <p>
                                 We like to keep things simple—technology should make your life easier, not more complicated.
-                                At XulTech, our solutions are built to help your business thrive, whether that means smoothing
+                                At {{$siteName}}, our solutions are built to help your business thrive, whether that means smoothing
                                 out operations, making your customers happier, or giving you that digital makeover that makes
                                 you stand out from the crowd.
                             </p>
                             <p>
                                 Our expert team? They don’t just show up with cookie-cutter solutions. Nope, we take the
                                 time to get to know you and your goals. Then, we craft technology that fits like a glove
-                                and grows with you. Whether you’re just starting or tackling new challenges, XulTech has
+                                and grows with you. Whether you’re just starting or tackling new challenges, {{$siteName}} has
                                 your back with scalable, lasting solutions that make a real impact.
                             </p>
                             <p>
@@ -342,7 +342,7 @@ Home 9  : Content Section
                                 Easily Manage Your Business with Smart Tech Solutions
                             </h2>
                             <p>
-                                At XulTech, we make business management a breeze! Whether you’re juggling multiple
+                                At {{$siteName}}, we make business management a breeze! Whether you’re juggling multiple
                                 projects or just need a little help staying on top of things, we’ve got the perfect tools
                                 to keep you organized, efficient, and ready for anything.
                             </p>
@@ -355,7 +355,7 @@ Home 9  : Content Section
                                 <div class="content-widget__body">
                                     <h3 class="content-widget__title">Access Anytime, Anywhere</h3>
                                     <p>
-                                        No matter where you are or what device you’re using—laptop, tablet, or phone—XulTech
+                                        No matter where you are or what device you’re using—laptop, tablet, or phone—{{$siteName}}
                                         keeps you connected and in control of your business at all times. It’s like having your office in your pocket!
                                     </p>
                                 </div>
@@ -367,7 +367,7 @@ Home 9  : Content Section
                                 <div class="content-widget__body">
                                     <h3 class="content-widget__title">Set Up in a Snap</h3>
                                     <p>
-                                        We know time is precious, so we’ve made getting started with XulTech super quick.
+                                        We know time is precious, so we’ve made getting started with {{$siteName}} super quick.
                                         In just a few minutes, you’ll be up and running, ready to tackle tasks, manage
                                         your team, and handle projects with ease.
                                     </p>
@@ -381,7 +381,7 @@ Home 9  : Content Section
                                     <h3 class="content-widget__title">Automate and Simplify</h3>
                                     <p>
                                         Why do things the hard way? Automate your scheduling, track progress, and keep
-                                        everyone on the same page with our simple-to-use tools. XulTech lets you handle
+                                        everyone on the same page with our simple-to-use tools. {{$siteName}} lets you handle
                                         all the busy work, so you can focus on what really matters—growing your business!
                                     </p>
                                 </div>
@@ -488,7 +488,7 @@ Home 9  : Content Section
                         <p class="testimonial-widget-large-2__review-text">
                             "
                             It’s has been nothing short of awesomeness, from their engagement, to their process and their
-                            deliverables. I would recommend their services for your business. Thank you XulTech
+                            deliverables. I would recommend their services for your business. Thank you {{$siteName}}
                             "
                         </p>
                         <div class="testimonial-widget-large-2__body">
@@ -505,7 +505,7 @@ Home 9  : Content Section
                             </div>
                         </div>
                         <div class="testimonial-widget-large-2__link">
-                            <a href="https://www.trustpilot.com/review/xultechng.com" target="_blank">Read All Reviews <i class="fa-solid fa-angle-right"></i>
+                            <a href="https://www.trustpilot.com/review/{{$siteName}}ng.com" target="_blank">Read All Reviews <i class="fa-solid fa-angle-right"></i>
                             </a>
                         </div>
                     </div>
@@ -535,10 +535,10 @@ Home 9  : Content Section
                     <div class="accordion-style-3" id="home-9_faq">
                         <div class="accordion-item">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-item-1"
-                                    aria-expanded="true" aria-controls="faq-item-1"> Q. What does XulTech do? </button>
+                                    aria-expanded="true" aria-controls="faq-item-1"> Q. What does {{$siteName}} do? </button>
                             <div id="faq-item-1" class="accordion-collapse collapse show" data-bs-parent="#home-9_faq">
                                 <div class="accordion-item__body">
-                                    XulTech builds custom software, mobile apps, and business management systems that help
+                                    {{$siteName}} builds custom software, mobile apps, and business management systems that help
                                     companies work smarter. If you need tech to grow your business, we’re here to make it happen!
                                 </div>
                             </div>
@@ -556,7 +556,7 @@ Home 9  : Content Section
                         <div class="accordion-item">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-item-3"
                                     aria-expanded="false" aria-controls="faq-item-3">
-                                Q. How long does it take to build software with XulTech? </button>
+                                Q. How long does it take to build software with {{$siteName}}? </button>
                             <div id="faq-item-3" class="accordion-collapse collapse" data-bs-parent="#home-9_faq">
                                 <div class="accordion-item__body">
                                     It depends on what you need! Simple projects can take a few weeks, while more complex
@@ -578,7 +578,7 @@ Home 9  : Content Section
                         <div class="accordion-item">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-item-5"
                                     aria-expanded="false" aria-controls="faq-item-5">
-                                Q. What makes XulTech different? </button>
+                                Q. What makes {{$siteName}} different? </button>
                             <div id="faq-item-5" class="accordion-collapse collapse" data-bs-parent="#home-9_faq">
                                 <div class="accordion-item__body">
                                     We’re not just your tech experts—we’re your ride-or-die partners! We take the time to
@@ -613,7 +613,7 @@ Home 9  : Content Section
                         <div class="accordion-item">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-item-8"
                                     aria-expanded="false" aria-controls="faq-item-8">
-                                Q. How do I get started with XulTech? </button>
+                                Q. How do I get started with {{$siteName}}? </button>
                             <div id="faq-item-8" class="accordion-collapse collapse" data-bs-parent="#home-9_faq">
                                 <div class="accordion-item__body">
                                     Easy! Just get in touch with us and let’s talk about your business needs. We’ll walk
@@ -635,7 +635,7 @@ Home 9  : Content Section
                         <div class="accordion-item">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-item-10"
                                     aria-expanded="false" aria-controls="faq-item-10">
-                                Q. How much does it cost to work with XulTech? </button>
+                                Q. How much does it cost to work with {{$siteName}}? </button>
                             <div id="faq-item-10" class="accordion-collapse collapse" data-bs-parent="#home-9_faq">
                                 <div class="accordion-item__body">
                                     Pricing depends on the scope of your project, but don’t worry, we offer flexible plans

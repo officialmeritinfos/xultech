@@ -65,7 +65,14 @@ class CompanyController extends Controller
     //contact page
     public function contactPage()
     {
+        $web = GeneralSetting::first();
 
+        return view('home.company.contact')
+            ->with([
+                'web' => $web,
+                'siteName'=>$web->name,
+                'pageName' => 'Contact Us',
+            ]);
     }
 
 }

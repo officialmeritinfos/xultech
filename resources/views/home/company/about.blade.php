@@ -76,13 +76,13 @@
                                 Once upon a time, we were known as Kopium—an ambitious, creative tech startup with a dream
                                 to help businesses succeed through technology. But as we grew, so did our vision. We realized
                                 that what we were doing wasn’t just about helping businesses; it was about empowering them
-                                to thrive in a rapidly evolving digital world. That’s when XulTech was born—a new name,
+                                to thrive in a rapidly evolving digital world. That’s when {{$siteName}} was born—a new name,
                                 a bigger vision, and a stronger commitment to delivering cutting-edge solutions.
                             </p>
                             <p>
                                 So why the change? Well, as Kopium, we found ourselves outgrowing our old name. We needed
                                 something that better reflected our mission: to provide expert, layered, and unified technology
-                                solutions (hence the XUL: Xpert Unified Layers). We knew that by rebranding to XulTech,
+                                solutions (hence the XUL: Xpert Unified Layers). We knew that by rebranding to {{$siteName}},
                                 we’d better communicate who we are and what we stand for—delivering more than just tech,
                                 but full, unified experiences that help businesses grow smarter.
                             </p>
@@ -93,7 +93,7 @@
                     <div class="content">
                         <div class="content-text-block">
                             <p>
-                                At XulTech, we’re all about using the right tech to solve real-world problems, without
+                                At {{$siteName}}, we’re all about using the right tech to solve real-world problems, without
                                 the jargon and tech-speak. Whether we’re developing a custom mobile app, streamlining your
                                 business with a powerful management system, or building you an e-commerce platform that
                                 shines, we believe in keeping things simple, practical, and effective. We take the time
@@ -107,12 +107,12 @@
                     <div class="content">
                         <div class="content-text-block">
                             <p>
-                                Our journey from Kopium to XulTech wasn’t just about changing our name—it was about evolving
+                                Our journey from Kopium to {{$siteName}} wasn’t just about changing our name—it was about evolving
                                 with our clients, their needs, and the ever-growing tech landscape. And that’s what we’re
                                 here for: to grow with you, to innovate, and to make sure your business is always a step
                                 ahead in this fast-paced digital world.<br/>
                                 So, if you're looking for a team that genuinely cares about your success, values collaboration,
-                                and believes in creating tech solutions that fit, welcome to XulTech. We’ve got the expertise,
+                                and believes in creating tech solutions that fit, welcome to {{$siteName}}. We’ve got the expertise,
                                 the passion, and the layers to help your business thrive. Let's build something amazing together!
                             </p>
                             <div class="content-divider"></div>
@@ -124,7 +124,7 @@
                         <div class="content-testimonial">
                             <div class="content-testimonial__text">
                                 <p>
-                                    “At XulTech, we’re passionate about what we do. We work hand-in-hand with our clients
+                                    “At {{$siteName}}, we’re passionate about what we do. We work hand-in-hand with our clients
                                     to ensure their digital transformation drives lasting success.”
                                 </p>
                             </div>
@@ -153,9 +153,9 @@ About : Fact Section
                 <div class="col-xxl-auto  col-lg-7 col-md-10 col-auto">
                     <div class="content">
                         <div class="content-text-block">
-                            <h2 class="content-title heading-md text-black">With over a decade of expertise, XulTech is all about the details so you don’t have to be.</h2>
+                            <h2 class="content-title heading-md text-black">With over a decade of expertise, {{$siteName}} is all about the details so you don’t have to be.</h2>
                             <p>
-                                When you partner with XulTech, you can trust that every software solution, website, or
+                                When you partner with {{$siteName}}, you can trust that every software solution, website, or
                                 business tool we build meets the highest standards of quality and performance. From ensuring
                                 your platform runs smoothly to making sure it’s ready to scale with your growth, we handle
                                 the complexity so you can focus on running your business. Our team’s commitment to precision
@@ -243,7 +243,7 @@ About : Fact Section
                             <h4 class="feature-widget-7__title">Innovation</h4>
                             <p>
                                 We thrive on finding creative, cutting-edge solutions to help our clients stay ahead in
-                                an ever-evolving digital world. At XulTech, innovation isn’t just a buzzword—it’s how we bring your ideas to life.
+                                an ever-evolving digital world. At {{$siteName}}, innovation isn’t just a buzzword—it’s how we bring your ideas to life.
                             </p>
                         </div>
                     </div>
@@ -257,7 +257,7 @@ About : Fact Section
                             <h4 class="feature-widget-7__title">Integrity</h4>
                             <p>
                                 Trust is at the heart of what we do. We deliver on our promises and maintain transparency
-                                in every project. When you work with XulTech, you know you’re getting honest, reliable service.
+                                in every project. When you work with {{$siteName}}, you know you’re getting honest, reliable service.
                             </p>
                         </div>
                     </div>
