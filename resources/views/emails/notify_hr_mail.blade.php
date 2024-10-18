@@ -58,7 +58,8 @@
         <li><strong>Resume:</strong> <a href="{{ $submission->resume }}">Download Resume</a></li>
         <li><strong>Cover Letter:</strong></li>
     </ul>
-    <p>{{ $submission->cover_letter ?? 'No cover letter provided.' }}</p>
+    <p>{!! nl2br(e($submission->cover_letter ?? 'No cover letter provided.')) !!}</p>
+
 
     <p>Thank you,<br>The {{$web->name}} Hiring Team</p>
 </div>

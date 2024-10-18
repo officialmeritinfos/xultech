@@ -36,7 +36,7 @@ class SendApplicantMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address($this->settings->sender_email),
+            from: new Address($this->settings->sender_email,$this->settings->name),
             subject: $this->settings->name.'- We have received your application',
         );
     }

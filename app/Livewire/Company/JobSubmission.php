@@ -39,7 +39,7 @@ class JobSubmission extends Component
         return [
             'coverLetter'=>['required','string'],
             'email'=>['required','email'],
-            'captcha' => ['required'],
+            'captcha' => ['nullableg'],
             'name'=>['required','string'],
             'phone'=>['required','string'],
             'resume'=>['required','mimes:pdf,doc,docx','max:3100'],
