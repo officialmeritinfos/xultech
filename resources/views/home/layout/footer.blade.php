@@ -17,3 +17,5 @@
 <!-- Activation Script -->
 @stack('js')
 <script src="{{asset('home/js/typewriter.js')}}"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<x-livewire-alert::scripts />

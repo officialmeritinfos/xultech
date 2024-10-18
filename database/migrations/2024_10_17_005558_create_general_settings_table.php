@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('contact_email')->nullable(); // Contact email address
             $table->string('contact_phone')->nullable(); // Contact phone number
             $table->string('address')->nullable(); // Company physical address
+            $table->string('hr_email')->nullable(); // Company HR Email
+            $table->string('sender_email')->nullable(); // Company Sender Email
 
             // Social Media Links
             $table->string('facebook_url')->nullable(); // Facebook profile link

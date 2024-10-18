@@ -1,5 +1,7 @@
 <?php
 
+use Google\Cloud\Storage\StorageClient;
+
 if (!function_exists('getVisitorLocation')) {
     /**
      * Retrieves the location information of a visitor based on their IP address.
@@ -64,4 +66,76 @@ if (!function_exists('getUserById')) {
         return \App\Models\User::where('id',$id)->with('posts')->first();
     }
 }
+if (!function_exists('shortenText')) {
+    function shortenText($text,$length=10): ?string
+    {
+        return \Illuminate\Support\Str::words($text,$length,'...');
+    }
+}
+if (!function_exists('googleUpload')){
+    /**
+     * Upload a file to Google Cloud Storage.
+     *
+     * This function uploads a given file to Google Cloud Storage and returns the public URL
+     * if the upload is successful. It uses the credentials stored in a JSON file and the
+     * bucket name from the configuration. The file is uploaded to the 'profile-uploads'
+     * directory in the bucket.
+     *
+     * @param \Illuminate\Http\UploadedFile $file The file to be uploaded.
+     * @return array An associative array containing the status of the upload and the public URL if successful.
+     */
+    function googleUpload($file)
+    {
+        $user = Auth::user();
 
+        //get the credentials in the json file
+        $googleConfigFile = file_get_contents(private_path('xulfashion2.json'));
+        //create a StorageClient object
+        $storage = new StorageClient([
+            'keyFile' => json_decode($googleConfigFile, true)
+        ]);
+
+        //get the bucket name from the env file
+        $storageBucketName = config('googlecloud.storage_bucket');
+        //pass in the bucket name
+        $bucket = $storage->bucket($storageBucketName);
+        $image_path = $file->getRealPath();
+        //rename the file
+        $fileName = time().'.'.$file->extension();
+
+        //open the file using fopen
+        $fileSource = fopen($image_path, 'r');
+        //specify the path to the folder and sub-folder where needed
+        $googleCloudStoragePath = 'profile-uploads/' . $fileName;
+
+        //upload the new file to google cloud storage
+        $request = $bucket->upload($fileSource, [
+            'predefinedAcl' => 'publicRead',
+            'name' => $googleCloudStoragePath
+        ]);
+
+        if ($request){
+            return [
+                'done'=>true,
+                'link'=>'https://storage.googleapis.com/xulfashion/profile-uploads/'.$fileName
+            ];
+        }else{
+            Log::info($request->json());
+            return [
+                'done'=>false,
+            ];
+        }
+    }
+}
+if (!function_exists('private_path')) {
+    /**
+     * Get the path to the private folder.
+     *
+     * @param string $path Optional path to append to the private folder path.
+     * @return string
+     */
+    function private_path($path = '')
+    {
+        return base_path('privateFolder' . ($path ? DIRECTORY_SEPARATOR . $path : ''));
+    }
+}

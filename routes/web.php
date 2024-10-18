@@ -13,9 +13,10 @@ Route::middleware(['web'])->group(function (){
     Route::get('book-us',[HomeController::class,'bookingPage'])->name('bookUsPage');
     //Company Page
     Route::prefix('company')->name('company.')->group(function (){
-        Route::get('about-us',[CompanyController::class,'aboutUs'])->name('aboutUs');
+        Route::get('about-us',[CompanyController::class,'aboutUsPage'])->name('aboutUs');
         Route::get('our-team',[CompanyController::class,'ourTeamPage'])->name('ourTeam');
         Route::get('career',[CompanyController::class,'careerPage'])->name('career');
+        Route::get('career/{slug}',[CompanyController::class,'careerDetail'])->name('careerDetail');
         Route::get('contact-us',[CompanyController::class,'contactPage'])->name('contact');
     });
     //Solutions Page
