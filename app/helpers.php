@@ -139,3 +139,44 @@ if (!function_exists('private_path')) {
         return base_path('privateFolder' . ($path ? DIRECTORY_SEPARATOR . $path : ''));
     }
 }
+
+if (!function_exists('shorten_number')){
+    /**
+     * Formats a number into a short, human-readable string with a suffix (K, M, B, T).
+     *
+     * @param float|int $n The number to format.
+     * @param int $precision The number of decimal places to include in the formatted number.
+     * @return string The formatted number with an appropriate suffix.
+     */
+    function shorten_number($n, $precision = 1)
+    {
+        if ($n>0) {
+            // Define suffixes and corresponding multipliers
+            $suffixes = [
+                12 => 'T',  // Trillion
+                9 => 'B',  // Billion
+                6 => 'M',  // Million
+                3 => 'K',  // Thousand
+                0 => ''    // No suffix
+            ];
+
+            // Determine the appropriate suffix and formatted number
+            foreach ($suffixes as $power => $suffix) {
+                if ($n >= pow(10, $power)) {
+                    $n_format = number_format($n / pow(10, $power), $precision);
+                    break;
+                }
+            }
+
+            // Remove unnecessary zeroes after decimal
+            if ($precision > 0) {
+                $dotzero = '.' . str_repeat('0', $precision);
+                $n_format = str_replace($dotzero, '', $n_format);
+            }
+
+            return $n_format . $suffix;
+        }else{
+            return  number_format($n, $precision);
+        }
+    }
+}

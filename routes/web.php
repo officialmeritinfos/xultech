@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\CompanyController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Home\IndustryController;
@@ -41,7 +42,6 @@ Route::middleware(['web'])->group(function (){
         Route::get('education',[IndustryController::class,'education'])->name('education');
         Route::get('real-estate',[IndustryController::class,'realEstate'])->name('realEstate');
         Route::get('logistics',[IndustryController::class,'logistics'])->name('logistics');
-        Route::get('manufacturing',[IndustryController::class,'manufacturing'])->name('manufacturing');
         Route::get('hospitality',[IndustryController::class,'hospitality'])->name('hospitality');
     });
     //product Page
@@ -52,11 +52,15 @@ Route::middleware(['web'])->group(function (){
     //Resources page
     Route::prefix('resources')->name('resources.')->group(function (){
         Route::get('index',[ResourcesController::class,'index'])->name('index');
-        Route::get('blogs',[ResourcesController::class,'blogPage'])->name('blogs');
-        Route::get('blogs/{slug}',[ResourcesController::class,'blogDetail'])->name('blogDetail');
         Route::get('terms-of-service',[ResourcesController::class,'termsOfService'])->name('termsOfService');
         Route::get('privacy-policy',[ResourcesController::class,'privacyPolicy'])->name('privacyPolicy');
         Route::get('work-process',[ResourcesController::class,'ourWorkProcess'])->name('work-process');
+        //Blogs
+        Route::get('blogs',[BlogController::class,'index'])->name('blogs');
+        Route::get('blogs/{slug}',[BlogController::class,'blogDetail'])->name('blogDetail');
+        Route::get('blogs/category/{category}',[BlogController::class,'blogCategoryPosts'])->name('blogs.category');
+        Route::get('blogs/author/{author}',[BlogController::class,'blogAuthor'])->name('blogs.author');
+
     });
 
 });

@@ -29,242 +29,194 @@
         <div class="row justify-content-center ">
             <div class="col-lg-8">
                 <div class="service-details_main-image">
-                    <img src="{{asset('home/image/solutions/school-management-system.png')}}" alt="service image" class="w-100">
+                    <img src="{{asset('home/image/solutions/booking-system.png')}}" alt="service image" class="w-100">
                 </div>
                 <div class="service-details_main-single">
-                    <h3 class="service-details_main-title"> Simplifying Education Management for Smarter Schools</h3>
+                    <h3 class="service-details_main-title"> Simplifying Your Booking Processes, One Click at a Time</h3>
                     <p>
-                        Running a school is no small feat—between managing students, keeping track of attendance, handling fees,
-                        scheduling classes, and staying on top of results, it’s enough to make your head spin! But that’s
-                        where XulTech’s School Solutions come in. We take the chaos out of school administration and give
-                        you a solution that makes managing a school as easy as, well, going to school!
+                        Ever tried to manage bookings with a pen and paper or an old spreadsheet system? Let’s be real—it’s a
+                        headache. Appointments get double-booked, schedules clash, and before you know it, things are spiraling
+                        out of control.
                         <br/>
-                        Our platform is built to help schools of all sizes, from small private institutions to large universities,
-                        streamline their operations and focus on what really matters: delivering quality education. Let’s break
-                        down everything we offer and how it transforms the educational experience for administrators, teachers,
-                        students, and parents alike.
+                        That’s where {{$siteName}}’s Booking System Solution swoops in like a superhero, ready to save the day
+                        (and your sanity!). We’ve designed a solution that makes booking management as easy as <b>“click, booked!”</b>,
+                        all while giving your clients a seamless experience.
                     </p>
                 </div>
                 <div class="service-details_main-single">
-                    <h3 class="service-details_main-title"> Student Information Management: All in One Place</h3>
+                    <h3 class="service-details_main-title"> Why Your Business Needs a Booking System (And Why You’ll Love Ours!)</h3>
                     <p>
-                        Gone are the days of shuffling through endless files and trying to keep track of each student’s
-                        details manually. With XulTech’s Student Information System, you can manage everything related to
-                        your students in one convenient platform.
-                    </p>
-                    <h5 class="service-details_main-single"><strong>Key Features:</strong></h5>
-                    <p>
-                        <strong>Student Profiles:</strong>
-                        Store all student data, from contact information to academic history, in one place.
+                        Gone are the days of manually managing appointments, calendars, and reservations. Whether you're
+                        a salon, a consultancy, a medical practice, or even a hotel, {{$siteName}}'s Booking System Solution is
+                        built to work for you. We’ve made it so simple, it almost feels like magic. And trust us, you’ll
+                        wonder how you ever survived without it.
                     </p>
                     <p>
-                        <strong>Attendance Tracking:</strong>
-                        Automatically track attendance and flag absentees with just a few clicks.
+                        <strong>No More Double Bookings (Phew!):</strong>
+                        Have you ever accidentally double-booked a client? Oops, right? With our booking system, that’s
+                        a thing of the past. Our solution syncs all your appointments in real-time, so you never have to
+                        worry about squeezing two clients into the same slot. This however has an exception but the exception
+                        is customized to you(assigning same hours to different staff)
                     </p>
                     <p>
-                        <strong>Gradebook Integration:</strong>
-                        Teachers can update grades and performance reports in real-time, making sure students (and their parents)
-                        are always in the loop.
+                        <strong>Self-Service Bookings:</strong>
+                        Let your customers book their own appointments—yes, that’s right! Our system allows clients to view
+                        your availability and make appointments on their own, from any device. Whether it's 2 PM or 2 AM,
+                        they can book without needing to call or email, giving them the flexibility to choose when and
+                        where they want to engage with you.
                     </p>
                     <p>
-                        <strong>Behavioral Records:</strong>
-                        Keep track of student behavior, noting any incidents or disciplinary actions.
+                        <strong>Automatic Reminders (Because We All Forget):</strong>
+                        You don’t want to be chasing clients with reminders every week, and we get it. Our system automatically
+                        sends email or SMS reminders to clients about their upcoming appointments. This reduces no-shows
+                        and keeps everyone on track.
                     </p>
                     <p>
-                        <strong>Who This Helps: Administrators, teachers, and even students who want to keep tabs on their own performance.</strong>
+                        <strong>Easy Cancellations and Rescheduling:</strong>
+                        Life happens! People get busy, plans change, and sometimes, clients need to reschedule or cancel
+                        appointments. Our system makes it easy for them to cancel or reschedule with just a few clicks,
+                        and you’re instantly notified of the change. No more missed calls or surprise absences!
                     </p>
                 </div>
                 <div class="service-details_main-single">
                     <h3 class="service-details_main-title">
-                        Timetable and Scheduling: No More Confusing Schedules
+                        Who Can Use {{$siteName}}’s Booking System?
                     </h3>
                     <p>
-                        Managing schedules can feel like trying to put together a puzzle with pieces that don’t fit. Our
-                        Timetable and Scheduling feature is designed to make things easier, ensuring that classes, exams,
-                        and extracurricular activities are organized without clashes.
-                    </p>
-                    <h5 class="service-details_main-single"><strong>Key Features:</strong></h5>
-                    <p>
-                        <strong>Automatic Class Scheduling:</strong>
-                        Our system automatically assigns classrooms, teachers, and time slots, ensuring there are no double bookings.
+                        Our solution isn’t just for one type of business. We’ve designed it to be flexible and scalable
+                        for a variety of industries. So, whether you’re running a small boutique or a multi-location health
+                        clinic, we’ve got you covered.
                     </p>
                     <p>
-                        <strong>Exam Timetables:</strong>
-                        Schedule exams without overlapping subjects or time conflicts
+                        <strong>Spas and Salons:</strong>
+                        Manage client appointments, track staff schedules, and even let clients select their preferred
+                        stylist or service. Our system helps you manage peak hours, staff availability, and even online
+                        payments, all in one spot.
                     </p>
                     <p>
-                        <strong>Flexible Scheduling:</strong>
-                        Make adjustments on the fly and notify students and teachers instantly.
+                        <strong>Healthcare Providers:</strong>
+                        Doctors, dentists, and clinics can use our system to allow patients to book appointments, reschedule,
+                        or cancel with ease. Plus, with integration into medical systems, patient records can be updated
+                        automatically after each visit.
+                    </p>
+                    <p>
+                        <strong>Hotels and Hospitality:</strong>
+                        From room bookings to restaurant reservations, we make it easy for guests to book, modify, and
+                        check availability. Managing multiple rooms or services? No problem! Our system handles it all
+                        effortlessly.
+                    </p>
+                    <p>
+                        <strong>Event Planners:</strong>
+                        Need to manage booking speakers, caterers, or attendees for an event? {{$siteName}}’s solution allows
+                        for custom scheduling and reminders to ensure everything goes off without a hitch. You’ll always
+                        know who’s attending and what’s still pending.
+                    </p>
+                    <p>
+                        <strong>Consulting Services:</strong>
+                        Whether you’re offering business consulting, legal advice, or tech support, let clients book time
+                        slots based on your availability. No more back-and-forth emails trying to nail down a time—let the
+                        system handle it!
+                    </p>
+                    <p>
+                        <strong>Real Estate:</strong>
+                        Real estate agents can streamline property viewings and meetings with clients. Allow potential buyers
+                        or renters to book property tours or consultation meetings with agents. Manage multiple listings,
+                        showings, and client appointments with ease.
+                    </p>
+                    <p>
+                        <strong>Transport and Logistics:</strong>
+                        For transport services, our system helps companies manage vehicle bookings, track availability,
+                        and assign drivers. Whether it’s a taxi service, delivery logistics, or bus reservations, we’ve
+                        got a booking solution that keeps your fleet organized and on time.
+                    </p>
+                    <p>
+                        <strong>Agencies (Marketing, Talent, or Creative):</strong>
+                        Agencies of all kinds can streamline client consultations, project meetings, or talent bookings
+                        with {{$siteName}}’s system. Whether you're managing influencer bookings, client pitches, or staff schedules,
+                        the system adapts to your needs and ensures you’re always in sync with your clients.
+                    </p>
+                </div>
+                <div class="service-details_main-single">
+                    <h3 class="service-details_main-title">
+                        Key Features You’ll Love
+                    </h3>
+                    <p>
+                        We know that every business is different, so we packed our solution with features that make booking
+                        management as flexible and tailored as you need it to be.
+                    </p>
+                    <p>
+                        <strong>Custom Booking Pages:</strong>
+                        Want to show off your brand? With {{$siteName}}, you can create a custom booking page that matches your
+                        business identity. You can include your logo, colors, and even specific questions to ask clients when they book.
+                    </p>
+                    <p>
+                        <strong>Multiple Service and Location Support:</strong>
+                        Whether you’re running one service at one location or multiple services across several locations,
+                        {{$siteName}}’s system can handle it all. Manage different offerings, staff, and even locations from a single dashboard.
+                    </p>
+                    <p>
+                        <strong>Online Payments Integration:</strong>
+                        No need for separate systems! Clients can book and pay at the same time, directly from the booking page.
+                        Our solution integrates with popular payment gateways like Stripe, PayPal, Paystack, Flutterwave, and others, making
+                        the process smooth and secure.
+                    </p>
+                    <p>
+                        <strong>Calendar Syncing:</strong>
+                        The days of juggling multiple calendars are over! {{$siteName}} integrates seamlessly with Google Calendar,
+                        Outlook, and more. Whether it’s staff schedules or business operations, everything is synced in
+                        real-time, keeping you on top of your day-to-day.
+                    </p>
+                    <p>
+                        <strong>Analytics and Reporting:</strong>
+                        Want to know your most popular time slots? Need to understand which services are bringing in the
+                        most revenue? Our system provides real-time analytics so you can track performance, manage customer
+                        trends, and make smarter business decisions.
+                    </p>
+                    <p>
+                        <strong> Secure and Private:</strong>
+                        We take data security seriously. {{$siteName}}’s booking solution keeps all client and booking information
+                        encrypted and secure, ensuring that your business complies with data protection regulations.
                     </p>
 
-                    <p>
-                        <strong>
-                            Who This Helps: School administrators and teachers who no longer have to spend hours manually creating timetables.
-                        </strong>
-                    </p>
                 </div>
                 <div class="service-details_main-single">
                     <h3 class="service-details_main-title">
-                        Fee and Payment Management: Simplifying School Finances
+                        Why {{$siteName}}’s Booking System Stands Out
                     </h3>
                     <p>
-                        Ah, school fees—the most dreaded topic for both parents and school accountants! But with XulTech’s
-                        Fee and Payment Management Module, managing tuition fees, tracking payments, and issuing receipts
-                        is smooth and stress-free.
-                    </p>
-                    <h5 class="service-details_main-single"><strong>Key Features:</strong></h5>
-                    <p>
-                        <strong>Automated Invoicing:</strong>
-                        Generate invoices for tuition, books, uniforms, or any other school-related fees.
+                        <strong>User-Friendly and Intuitive:</strong>
+                        You don’t have to be a tech genius to use our system. It’s designed to be so simple and user-friendly
+                        that even a complete tech newbie could manage bookings like a pro!
                     </p>
                     <p>
-                        <strong>Online Payments:</strong>
-                        Parents can pay school fees online via secure payment gateways like Paystack or Flutterwave or
-                        Stripe(whichever is supported in your country),  making it hassle-free.
+                        <strong>Always Available (Even When You’re Not):</strong>
+                        Clients can book 24/7, even when your doors are closed. That means more bookings, more revenue,
+                        and less time spent managing appointments during your busy workday.
                     </p>
                     <p>
-                        <strong>Payment Tracking:</strong>
-                        Track who has paid and who still owes, complete with reminders for overdue payments.
+                        <strong>Customizable to Fit Your Needs:</strong>
+                        Need a system that grows with your business? {{$siteName}}’s booking solution is scalable, allowing you
+                        to add more staff, services, or locations whenever you need. Whether you’re expanding locally or
+                        globally, we’ve got you covered.
                     </p>
                     <p>
-                        <strong>Scholarships and Discounts:</strong>
-                        Apply fee discounts or scholarships to specific students and adjust balances accordingly.
-                    </p>
-
-                    <p>
-                        <strong>
-                            Who This Helps: School accountants, parents, and administrators who need to keep finances organized.
-                        </strong>
-                    </p>
-                </div>
-                <div class="service-details_main-single">
-                    <h3 class="service-details_main-title">
-                        Parent-Teacher Communication: Keeping Everyone in the Loop
-                    </h3>
-                    <p>
-                        If there’s one thing parents want, it’s to stay informed about their child’s education. Our Parent-Teacher
-                        Communication feature makes it easy for teachers and parents to stay connected—without having to
-                        write a million notes or emails.
-                    </p>
-                    <h5 class="service-details_main-single"><strong>Key Features:</strong></h5>
-                    <p>
-                        <strong>Messaging Platform:</strong>
-                        Send academic performance reports directly to parents via email or SMS.
-                    </p>
-                    <p>
-                        <strong>Progress Reports:</strong>
-                        Send academic performance reports directly to parents via email or SMS.
-                    </p>
-                    <p>
-                        <strong>Event Notifications:</strong>
-                        Keep parents updated on school events, field trips, and important announcements.
-                    </p>
-
-                    <p>
-                        <strong>
-                            Who This Helps: Teachers, parents, and students who benefit from clear, consistent communication.
-                        </strong>
-                    </p>
-                </div>
-                <div class="service-details_main-single">
-                    <h3 class="service-details_main-title">
-                        Learning Management System (LMS): Virtual Classrooms for Modern Learning
-                    </h3>
-                    <p>
-                        Whether your school is fully in-person, online, or a hybrid of both, our Learning Management System
-                        (LMS) provides everything you need to create virtual classrooms, share resources, and assign work—all in one place.
-                    </p>
-                    <h5 class="service-details_main-single"><strong>Key Features:</strong></h5>
-                    <p>
-                        <strong>Online Classrooms:</strong>
-                        Create virtual classrooms where teachers can upload lessons, assignments, and quizzes.
-                    </p>
-                    <p>
-                        <strong>Resource Sharing:</strong>
-                        Share documents, videos, and learning materials with students easily.
-                    </p>
-                    <p>
-                        <strong>Assignment Submissions:</strong>
-                        Students can submit homework or projects through the LMS, and teachers can grade them online.
-                    </p>
-                    <p>
-                        <strong>Discussion Boards:</strong>
-                        Encourage collaboration between students through discussion threads and group work.
-                    </p>
-
-                    <p>
-                        <strong>
-                            Who This Helps: Teachers and students who need a streamlined platform for online or hybrid learning.
-                        </strong>
-                    </p>
-                </div>
-                <div class="service-details_main-single">
-                    <h3 class="service-details_main-title">
-                        Exam and Results Management: Say Goodbye to Manual Grading
-                    </h3>
-                    <p>
-                        The exam season can be hectic, but XulTech makes it easier for schools to handle exams and results
-                        through automation and real-time tracking.
-                    </p>
-                    <p>
-                        Schedule exams and assign exam rooms or online exam sessions,<br/>
-                        Teachers can input grades directly into the system, and results are calculated and stored instantly,<br/>
-                        Automatically generate student report cards based on their exam results and performance,<br/>
-                        Parents can access real-time results and progress reports via the parent portal.
-                    </p>
-                    <p>
-                        <strong>
-                            Who This Helps: Teachers, students, and parents—basically everyone who’s involved in the exam process!
-                        </strong>
-                    </p>
-                </div>
-                <div class="service-details_main-single">
-                    <h3 class="service-details_main-title">
-                        Library Management: Easy Access to Learning Materials
-                    </h3>
-                    <p>
-                        Keeping track of a school library can be overwhelming, but with our Library Management System,
-                        cataloging books, checking them out, and keeping track of borrowed materials is easy.
-                    </p>
-                    <p>
-                        Digital Catalog: List all available books, journals, and resources in a searchable online database.<br/>
-                        Book Borrowing and Returns: Track who borrowed what and send reminders for overdue books.<br/>
-                        Resource Reservation: Allow students to reserve books online for future pickup.<br/>
-                        E-books and Online Resources: Manage and provide access to digital resources and e-books.
-                    </p>
-                    <p>
-                        <strong>
-                            Who This Helps: Librarians, teachers, and students who need easy access to learning materials.
-                        </strong>
-                    </p>
-                </div>
-                <div class="service-details_main-single">
-                    <h3 class="service-details_main-title">
-                        Hostel and Dorm Management
-                    </h3>
-                    <p>
-                        If your school offers boarding facilities, our Hostel Management System takes care of all the
-                        logistical headaches that come with managing student accommodation.
-                    </p>
-                    <p>
-                        Room Assignments: Assign students to dormitories and specific rooms, ensuring there’s no overcrowding.<br/>
-                        Visitor Logs: Track who enters and leaves the hostel, ensuring the safety of your students.<br/>
-                        Maintenance Requests: Allow students or staff to submit maintenance requests for dorm repairs or cleaning services.
-                    <p>
-                        <strong>
-                            Who This Helps: School administrators, hostel wardens, and students living on campus.
-                        </strong>
+                        <strong>New but always improving:</strong>
+                        As a new player in the industry, we know we need to bring our A-game, which means we’re dedicated
+                        to ensuring your satisfaction. We work harder to make sure that your success is our success, and
+                        we won’t stop until you’re blown away by what we deliver.
                     </p>
                 </div>
 
+
                 <div class="service-details_main-single">
-                    <h3 class="service-details_main-title">Ready to Transform Your School?</h3>
+                    <h3 class="service-details_main-title">Ready to Take the Hassle Out of Bookings?</h3>
                     <p>
-                        If you're tired of juggling papers, spreadsheets, and outdated systems, let XulTech simplify the way
-                        you run your school. With our all-in-one school management solution, you can focus more on delivering a
-                        top-notch education and less on administrative tasks.
+                        It’s time to ditch the spreadsheets and make your booking process a breeze! {{$siteName}}’s Booking System
+                        Solution lets you manage appointments, track staff availability, and process payments, all from
+                        one easy-to-use platform. So why wait? Let’s make managing bookings fun again (or at least stress-free!).
                         <br/>
-                        Get in touch with us today, and let’s build the future of education—together!
+                        Get in touch with us today to find out how our solution can transform your business and give you
+                        more time to focus on what really matters—growing your brand and delighting your customers!
                     </p>
                 </div>
             </div>

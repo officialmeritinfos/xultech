@@ -152,11 +152,6 @@
                                         </a>
                                     </li>
                                     <li class="sub-menu_item">
-                                        <a href="{{route('industry.manufacturing')}}">
-                                            <span class="menu-item-text">Manufacturing</span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-menu_item">
                                         <a href="{{route('industry.hospitality')}}">
                                             <span class="menu-item-text">Hospitality</span>
                                         </a>
