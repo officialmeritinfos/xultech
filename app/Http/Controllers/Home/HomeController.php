@@ -28,6 +28,6 @@ class HomeController extends Controller
             'siteName' => $settings->name,
             'pageName' => 'Get Started',
         ];
-        return view('home.home')->with($data);
+        return view('home.book_us')->with($data);
     }
 }
