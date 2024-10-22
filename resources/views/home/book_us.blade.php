@@ -22,5 +22,17 @@
         </div>
     </div>
 
+    <!-- ~~~~~~~~~~~~~~~~~~~~~
+ About : Content Section
+~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="about_content-section bg-light-2  section-padding-120">
+        <div class="container">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/xultechng?hide_gdpr_banner=1&primary_color=ffc100" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+        </div>
+    </div>
+
 
 @endsection

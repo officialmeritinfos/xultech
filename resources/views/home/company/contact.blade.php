@@ -49,7 +49,7 @@
                         </div>
                         <div class="feature-card__body">
                             <h3 class="feature-card__title">Give us a call</h3>
-                            <p>Give us a ring at <span>{{$web->contact_phone}}/span>. Every Sunday-Saturday from 8 am to 11 pm UTC.</p>
+                            <p>Give us a ring at <span>{{$web->contact_phone}}</span>. Every Sunday-Saturday from 8 am to 11 pm UTC.</p>
                         </div>
                     </div>
                 </div>
