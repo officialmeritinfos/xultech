@@ -16,7 +16,7 @@ class CheckSessionKeys
     public function handle(Request $request, Closure $next): Response
     {
         // Define the required session keys
-        $requiredKeys = ['session_id', 'email'];
+        $requiredKeys = ['email'];
         // Check if any required session key is missing
         foreach ($requiredKeys as $key) {
             if (!$request->session()->has($key)) {

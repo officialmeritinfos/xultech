@@ -16,6 +16,8 @@ class EnsureIsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
+
+
         //check that user is logged-in first
         if (auth()->check()) {
             if ((auth()->user()->role == 'admin' || auth()->user()->role == 'superadmin') && auth()->user()->is_admin) {

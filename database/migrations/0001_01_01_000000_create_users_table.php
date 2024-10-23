@@ -26,6 +26,7 @@ return new class extends Migration
             $table->timestamp('last_login_at')->nullable();
             $table->ipAddress('last_login_ip')->nullable();
             $table->string('two_factor_secret')->nullable();
+            $table->boolean('two_factor')->default(false);
             $table->string('two_factor_recovery_codes')->nullable();
             $table->timestamp('password_changed_at')->nullable();
             $table->timestamp('trial_ends_at')->nullable();

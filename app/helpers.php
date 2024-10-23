@@ -1,6 +1,7 @@
 <?php
 
 use Google\Cloud\Storage\StorageClient;
+use Illuminate\Http\Request;
 
 if (!function_exists('getVisitorLocation')) {
     /**
@@ -178,5 +179,30 @@ if (!function_exists('shorten_number')){
         }else{
             return  number_format($n, $precision);
         }
+    }
+}
+
+if (!function_exists('redirectToDashboard')) {
+    function redirectToDashboard(\App\Models\User $user): string
+    {
+        return match ($user->role) {
+            'superadmin', 'admin' => route('admin.dashboard'),
+            default => route('user.dashboard'),
+        };
+    }
+}
+if (!function_exists('logUserActivity')) {
+    function logUserActivity(\App\Models\User $user,$action,$ip=null)
+    {
+        $agent = new \Jenssegers\Agent\Agent();
+
+        \App\Models\UserActivity::create([
+            'user_id'=>$user->id,
+            'ip_address'=>$ip,
+            'action'=>$action,
+            'device'=>$agent->device(),
+            'browser'=>$agent->browser(),
+            'performed_at'=>\Carbon\Carbon::now()->setTimezone($user->timezone)->toDateTimeString(),
+        ]);
     }
 }

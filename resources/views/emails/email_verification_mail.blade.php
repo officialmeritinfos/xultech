@@ -60,7 +60,7 @@
     <!-- Greeting -->
     <tr>
         <td align="left" style="padding: 0 40px; font-size: 24px; color: #333333;">
-            <h2>Welcome to {{$web->name}}, {{ $user->name }}!</h2>
+            <h4>Welcome to {{$web->name}}, {{ $user->name }}!</h4>
         </td>
     </tr>
 

@@ -13,11 +13,11 @@ return Application::configure(basePath: dirname(__DIR__))
             Route::middleware('web')
                 ->prefix('auth')
                 ->group(base_path('routes/auth.php'));
-            Route::middleware(['web', 'auth','auth.session'])
+            Route::middleware(['web', 'auth','auth.session','is_active'])
                 ->prefix('user')
                 ->name('user.')
                 ->group(base_path('routes/user.php'));
-            Route::middleware(['web', 'auth','auth.session','isAdmin'])
+            Route::middleware(['web', 'auth','auth.session','is_active','isAdmin'])
                 ->prefix('modacore')
                 ->name('admin.')
                 ->group(base_path('routes/admin.php'));
@@ -29,6 +29,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'isAdmin' => \App\Http\Middleware\EnsureIsAdmin::class,
             'check.session'=>\App\Http\Middleware\CheckSessionKeys::class,
+            'is_active'=>\App\Http\Middleware\EnsureLoggedUserIsActive::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

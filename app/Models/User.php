@@ -4,11 +4,13 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
+use Faker\Factory as Faker;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -192,6 +194,13 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->role === 'reader';
     }
 
+    public function hasTwoFactorEnabled()
+    {
+        //retrieve if the user's two-factor authentication is on
+        return $this->two_factor;
+    }
+
+
     public function posts()
     {
         // Define the relationship: a user has many posts
@@ -224,5 +233,50 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         // Defines a one-to-many relationship with projects
         return $this->hasMany(Project::class);
+    }
+    protected function twoFactorSecret(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value) => decrypt($value),  // Decrypt the secret when retrieving
+            set: fn ($value) => encrypt($value)   // Encrypt the secret when setting
+        );
+    }
+
+    /**
+     * Mutator for the two_factor attribute.
+     * When two-factor is enabled, a recovery code will be generated.
+     */
+    public function setTwoFactorAttribute($value)
+    {
+        // Set the two_factor value (true or false)
+        $this->attributes['two_factor'] = $value;
+
+        // Only generate recovery code if two_factor is set to true
+        if ($value) {
+            // Instantiate the Faker library to generate random words
+            $faker = Faker::create();
+            // Generate a recovery code consisting of 10 random words using Faker
+            $recoveryCode = collect(range(1, 10))->map(function () use ($faker) {
+                return $faker->unique()->word;  // Generate unique random words using Faker
+            })->implode(' ');  // Join the words with spaces
+            // Hash the recovery code before saving to the database
+            $this->attributes['two_factor_recovery_code'] = bcrypt($recoveryCode);
+            // Store the plain text recovery code in an attribute for display purposes
+            $this->plain_recovery_code = $recoveryCode;
+        }
+    }
+    /**
+     * Method to retrieve the plain recovery code for displaying once after generation.
+     */
+    public function getPlainRecoveryCodeAttribute()
+    {
+        return $this->attributes['plain_recovery_code'] ?? null;
+    }
+    /**
+     * Relationship: A user has many activities.
+     */
+    public function activities()
+    {
+        return $this->hasMany(UserActivity::class);
     }
 }

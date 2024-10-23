@@ -27,8 +27,6 @@ class Register extends Component
     public $password;
     public $password_confirmation;
     public $username;
-
-    public $code;
     public $captcha = null;
 
     public function mount(Request $request)
@@ -80,7 +78,7 @@ class Register extends Component
                     'showEmailVerificationForm'=>true,
                     'email' =>$user->email
                 ]);
-                return;
+                return $this->redirect(route('register'));
             }
         }catch (\Exception $e){
             DB::rollBack();
@@ -119,91 +117,5 @@ class Register extends Component
         } else {
             $this->captcha = true;
         }
-    }
-    //resend verification code
-    public function resend()
-    {
-        //fetch email from session
-        $email = session('email');
-        // Send the verification email
-        $user = User::where('email', $email)->first();
-        Mail::to($email)->queue(new EmailVerificationMail($user));
-
-    }
-    //submit to verify email
-    public function verifyEmail(Request $request)
-    {
-        $this->validate([
-            'code'=>['required','numeric','digits:6'],
-        ]);
-
-        try {
-            if ($request->session()->has('showEmailVerificationForm')) {
-                //fetch email from session
-                $email = session('email');
-                // Send the verification email
-                $user = User::where('email', $email)->first();
-                //fetch code
-                $verification = EmailVerification::where('user_id', $user->id)->orderBy('id','desc')->first();
-                if (empty($verification)) {
-                    $this->alert('error', '', [
-                        'position' => 'top-end',
-                        'timer' => 5000,
-                        'toast' => true,
-                        'text' => 'No action is needed on your account.',
-                        'width' => '400',
-                    ]);
-                    return;
-                }
-                // Check if the token has expired
-                if (Carbon::now()->greaterThan($verification->expires_at)) {
-                    $this->alert('error', '', [
-                        'position' => 'top-end',
-                        'timer' => 5000,
-                        'toast' => true,
-                        'text' => 'Verification token has expired.',
-                        'width' => '400',
-                    ]);
-                    return;
-                }
-                // Check if the provided token matches the hashed token
-                if (!Hash::check($this->code, $verification->verification_token)) {
-                    $this->alert('error', '', [
-                        'position' => 'top-end',
-                        'timer' => 5000,
-                        'toast' => true,
-                        'text' => 'Invalid verification token.',
-                        'width' => '400',
-                    ]);
-                    return;
-                }
-                $user->markEmailAsVerified();
-                $user->save();
-                // Delete the verification token after successful verification
-                $verification->delete();
-
-                $this->reset('code');
-                $this->alert('success', '', [
-                    'position' => 'top-end',
-                    'timer' => 5000,
-                    'toast' => true,
-                    'text' => 'Your email has been successfully verified.',
-                    'width' => '400',
-                ]);
-                $request->session()->flush();
-                $this->dispatch('emailVerified',url:route('login'));
-                return;
-            }
-        }catch (\Exception $e){
-            logger($e->getMessage());
-            $this->alert('error', '', [
-                'position' => 'top-end',
-                'timer' => 5000,
-                'toast' => true,
-                'text' => 'An error occurred. No worries, we are working on it.',
-                'width' => '400',
-            ]);
-        }
-
     }
 }
