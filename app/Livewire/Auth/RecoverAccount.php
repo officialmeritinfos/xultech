@@ -216,15 +216,13 @@ class RecoverAccount extends Component
             }
             //update user password
             $user->update([
-                'password' => Hash::make($request->password),
+                'password' => bcrypt($this->password),
                 'password_changed_at' => Carbon::now()->setTimezone($user->timezone)->toDateTimeString(),
             ]);
             Mail::to($user->email)->queue(new PasswordChangedMail($user));
             logUserActivity( $user,'Password Changed',$request->ip());
             Auth::logoutOtherDevices($request->password);
             Auth::logoutCurrentDevice();
-            $this->showVerificationForm = false;
-            $this->showPasswordResetForm=false;
             $request->session()->flush();
             DB::commit();
             $this->alert('success', '', [
@@ -234,7 +232,7 @@ class RecoverAccount extends Component
                 'text' => 'Password Successfully changed. Redirecting',
                 'width' => '400',
             ]);
-            $this->dispatch('passwordChanged',url:redirectToDashboard($user));
+            $this->dispatch('passwordChanged',url:route('login'));
             return;
         }catch (\Exception $e){
             DB::rollBack();

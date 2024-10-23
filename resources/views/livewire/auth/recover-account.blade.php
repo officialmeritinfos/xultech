@@ -49,7 +49,7 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <label>Reset Token</label>
-                                <input class="form-control" type="text" name="login" placeholder="Enter your email/username"
+                                <input class="form-control" type="text" name="login" placeholder="Enter your token"
                                        wire:model="code" minlength="6" maxlength="6">
                                 @error('code') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
