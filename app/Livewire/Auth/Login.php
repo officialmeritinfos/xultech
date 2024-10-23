@@ -28,6 +28,7 @@ class Login extends Component
 
     public function mount(Request $request)
     {
+
         if ($request->session()->has('showTwoFactorForm')) {
             $this->showTwoFactorForm = true;
             $this->showEmailVerificationForm = false;
@@ -110,6 +111,7 @@ class Login extends Component
                         'text' => 'Please authenticate this login',
                         'width' => '400',
                     ]);
+                    session()->put('remember',$this->remember);
                     return redirect(route('login'));
                 }else{
                     Mail::to($user->email)->queue(new LoginMail($user,['ipAddress'=>$request->ip()]));

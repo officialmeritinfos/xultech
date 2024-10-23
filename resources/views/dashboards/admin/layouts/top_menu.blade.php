@@ -18,38 +18,44 @@
                 <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="notification-btn">
                         <i class="ri-notification-2-line"></i>
-                        <span class="badge">6</span>
+                        <span class="badge">{{$user->limitedInactiveActivities(10)->count()}}</span>
                     </div>
                 </div>
 
                 <div class="dropdown-menu">
                     <div class="dropdown-header d-flex justify-content-between align-items-center bg-linear">
-                        <span class="title d-inline-block">6 New Notifications</span>
-                        <span class="mark-all-btn d-inline-block">Mark all as read</span>
+                        <span class="title d-inline-block">{{$user->limitedInactiveActivities(10)->count()}} New Notifications</span>
+                        <a href="{{route('admin.markAllAsRead')}}" class="mark-all-btn d-inline-block">Mark all as read</a>
                     </div>
 
                     <div class="dropdown-body" data-simplebar>
-                        <a href="inbox" class="dropdown-item d-flex align-items-center">
-                            <div class="icon">
-                                <i class='bx bx-message-rounded-dots'></i>
-                            </div>
+                        @foreach($user->limitedInactiveActivities(10)->get() as $activity)
+                            <a href="{{route('admin.markNotificationAsRead',['id'=>$activity->id])}}" class="dropdown-item d-flex align-items-center">
+                                <div class="icon">
+                                    <i class='bx bx-bell'></i>
+                                </div>
 
-                            <div class="content">
-                                <span class="d-block">Just sent a new message!</span>
-                                <p class="sub-text mb-0">2 sec ago</p>
-                            </div>
-                        </a>
+
+                                <div class="content">
+                                    <span class="d-block">{{$activity->action}}</span>
+                                    <p class="sub-text mb-0">
+                                        {{$activity->created_at->diffForHumans()}}
+                                    </p>
+                                </div>
+                            </a>
+                        @endforeach
                     </div>
 
                     <div class="dropdown-footer">
-                        <a href="inbox" class="dropdown-item">View All</a>
+                        <a href="{{route('admin.notifications')}}" class="dropdown-item">View All</a>
                     </div>
                 </div>
             </li>
 
             <li class="nav-item dropdown profile-nav-item">
                 <a class="nav-link dropdown-toggle avatar" href="#" id="navbarDropdown-4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="{{asset('dashboard/images/avatar.png')}}" alt="Images">
+                    <img src="{{$user->profile_photo_path??'https://ui-avatars.com/api/?rounded=true&background=random&name='.$user->name}}"
+                         width="50" alt="Images">
                     <h3>{{$user->name}}</h3>
                     <span>{{ucfirst($user->role)}}</span>
                 </a>
@@ -57,11 +63,16 @@
                 <div class="dropdown-menu">
                     <div class="dropdown-header d-flex flex-column align-items-center">
                         <div class="figure mb-3">
-                            <img src="{{asset('dashboard/images/avatar.png')}}" class="rounded-circle" alt="image">
+                            <img src="{{$user->profile_photo_path??'https://ui-avatars.com/api/?rounded=true&background=random&name='.$user->name}}" class="rounded-circle" alt="image">
                         </div>
 
                         <div class="info text-center">
                             <span class="name">{{$user->name}}</span>
+                            <span class="name" style="word-break: break-word;">
+                                <span class="badge bg-primary cpy" data-clipboard-text="{{$user->uuid}}">
+                                    {{$user->uuid}}
+                                </span>
+                            </span>
                             <p class="mb-3 email">
                                 {{$user->email}}
                             </p>

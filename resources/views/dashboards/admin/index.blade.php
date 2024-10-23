@@ -1,4 +1,4 @@
-@extends('dashboards.layouts.base')
+@extends('dashboards.admin.layouts.base')
 @section('content')
 
     <div class="today-card-area pt-24">

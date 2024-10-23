@@ -260,9 +260,7 @@ class User extends Authenticatable implements MustVerifyEmail
                 return $faker->unique()->word;  // Generate unique random words using Faker
             })->implode(' ');  // Join the words with spaces
             // Hash the recovery code before saving to the database
-            $this->attributes['two_factor_recovery_code'] = bcrypt($recoveryCode);
-            // Store the plain text recovery code in an attribute for display purposes
-            $this->plain_recovery_code = $recoveryCode;
+            $this->attributes['two_factor_recovery_codes'] = encrypt($recoveryCode);
         }
     }
     /**
@@ -278,5 +276,24 @@ class User extends Authenticatable implements MustVerifyEmail
     public function activities()
     {
         return $this->hasMany(UserActivity::class);
+    }
+    /**
+     * Relationship: A user has many activities with status == false.
+     */
+    public function inactiveActivities()
+    {
+        return $this->hasMany(UserActivity::class)->where('status', false);
+    }
+    /**
+     * Relationship: A user has many activities where status == false and limited to a certain number.
+     *
+     * @param int $limit The number of activities to retrieve.
+     */
+    public function limitedInactiveActivities($limit = 6)
+    {
+        return $this->hasMany(UserActivity::class)
+            ->where('status', false)
+            ->orderBy('created_at', 'desc')
+            ->limit($limit);
     }
 }

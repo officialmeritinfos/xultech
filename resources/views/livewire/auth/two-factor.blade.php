@@ -3,7 +3,7 @@
         <h3>Two-factor Authentication</h3>
         <p>Enter the code from your authentication app.</p>
 
-        <form class="user-form" wire:submit.prevent="verifyEmail()">
+        <form class="user-form" wire:submit.prevent="processTwoFactor()">
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">

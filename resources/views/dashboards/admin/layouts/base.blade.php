@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="zxx">
 <head>
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap Min CSS -->
-    @include('dashboards.layouts.header')
+    @include('dashboards.admin.layouts.header')
 </head>
 
 <body class="body-bg-f5f5f5">
@@ -18,13 +17,13 @@
     </div>
 </div>
 <!-- End Preloader Area -->
-@include('dashboards.layouts.menu')
+@include('dashboards.admin.layouts.menu')
 <!-- End Sidebar Area -->
 
 <!-- Start Main Content Area -->
 <div class="main-content d-flex flex-column">
     <div class="container-fluid">
-        @include('dashboards.layouts.top_menu')
+        @include('dashboards.admin.layouts.top_menu')
     </div>
 
     @yield('content')
@@ -36,7 +35,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="copy-right">
-                        <p>Copyright @2022 Dashli. Designed By <a href="https://envytheme.com/" target="_blank">EnvyTheme</a></p>
+                        <p>Copyright @2022 Dashli. Designed By <a href="https://envytheme.com/" target="_blank">EnvyTheme</a>
+                        </p>
                     </div>
                 </div>
 
@@ -84,6 +84,9 @@
 </div>
 <!-- End Go Top Area -->
 
-@include('dashboards.layouts.footer')
+@include('dashboards.admin.layouts.footer')
+@if(!$user->hasTwoFactorEnabled())
+    <livewire:admin.components.set-two-factor :user="$user"/>
+@endif
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\UserActivity;
 use Google\Cloud\Storage\StorageClient;
 use Illuminate\Http\Request;
 
@@ -196,7 +197,7 @@ if (!function_exists('logUserActivity')) {
     {
         $agent = new \Jenssegers\Agent\Agent();
 
-        \App\Models\UserActivity::create([
+        UserActivity::create([
             'user_id'=>$user->id,
             'ip_address'=>$ip,
             'action'=>$action,
@@ -204,5 +205,11 @@ if (!function_exists('logUserActivity')) {
             'browser'=>$agent->browser(),
             'performed_at'=>\Carbon\Carbon::now()->setTimezone($user->timezone)->toDateTimeString(),
         ]);
+    }
+}
+if (!function_exists('fetchUserLatestActivities')) {
+    function fetchUserLatestActivities(\App\Models\User $user)
+    {
+        return UserActivity::where('user_id',$user->id)->orderBy('id','desc')->take(5)->get();
     }
 }
