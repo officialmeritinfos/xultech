@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\GeneralSetting;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -30,5 +31,14 @@ class LoginController extends Controller
             $user->save();
             return to_route('login')->with('success','Account successfully locked');
         }
+    }
+    //logout
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect(route('login'))->with('success','Logged out successfully');
     }
 }

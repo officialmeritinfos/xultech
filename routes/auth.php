@@ -13,4 +13,8 @@ Route::middleware(['web'])->group(function () {
 
     //Lock User Account
     Route::get('lock-account/{email}/block',[LoginController::class,'lockAccount'])->name('lock-account');
+
+    //Logout
+    Route::get('logout',[LoginController::class,'logout'])->name('logout');
 });
+
