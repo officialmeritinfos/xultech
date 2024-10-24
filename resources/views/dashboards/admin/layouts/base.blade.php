@@ -25,6 +25,24 @@
     <div class="container-fluid">
         @include('dashboards.admin.layouts.top_menu')
     </div>
+    <div class="page-title-area">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="page-title">
+                        <h3>{{$pageName}}</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-sm-6">
+                    <ul class="page-title-list">
+                        <li>{{$parentMenu??''}}</li>
+                        <li>{{$pageName}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     @yield('content')
 
@@ -35,7 +53,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="copy-right">
-                        <p>Copyright @2022 Dashli. Designed By <a href="https://envytheme.com/" target="_blank">EnvyTheme</a>
+                        <p>Copyright {{date('Y')}} {{$siteName}}.
                         </p>
                     </div>
                 </div>

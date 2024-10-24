@@ -82,5 +82,9 @@ class Post extends Model
             $this->increment('downvotes');
         }
     }
+    public function viewers()
+    {
+        return $this->hasMany(PostViewer::class);
+    }
 
 }

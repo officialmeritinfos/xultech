@@ -31,7 +31,7 @@
                 @if($blogs->count() >0)
                     <div class="col-xl-8">
                         <div class="blog_content">
-                            <div class="blog-card-large-row" id="blog-list">
+                            <div class="blog-card-large-row" id="blog">
                                 @include('home.resources.components.post_list')
                             </div>
                         </div>

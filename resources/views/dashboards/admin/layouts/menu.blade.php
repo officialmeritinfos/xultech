@@ -38,8 +38,13 @@
 
                 <ul class="sidemenu-nav-second-level">
                     <li>
-                        <a href="wallet">
-                            <span class="menu-title">Wallet</span>
+                        <a href="{{route('admin.blog')}}">
+                            <span class="menu-title">Posts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.blog.new')}}">
+                            <span class="menu-title">Add Post</span>
                         </a>
                     </li>
                 </ul>

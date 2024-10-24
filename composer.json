@@ -7,6 +7,7 @@
     "require": {
         "php": "^8.2",
         "bacon/bacon-qr-code": "^3.0",
+        "dasundev/livewire-quill-text-editor": "^1.0",
         "google/cloud-storage": "^1.43",
         "jantinnerezo/livewire-alert": "^3.0",
         "jenssegers/agent": "^2.6",

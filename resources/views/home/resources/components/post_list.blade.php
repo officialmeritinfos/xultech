@@ -7,7 +7,7 @@
             <div class="blog-card-large__meta">
                 <a href="{{route('resources.blogs.author',['author'=>$blog->user->username])}}">
                     <span class="blog-card-large__user">
-                        <img src="{{asset('home/image/blog/user-image.png')}}" alt="user image">
+                        <img src="{{$blog->user->profile_photo_path??'https://ui-avatars.com/api/?rounded=true&background=random&name='.$blog->user->name}}" alt="user image">
                         {{$blog->user->name}}
                     </span>
                 </a>

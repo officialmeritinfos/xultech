@@ -15,7 +15,7 @@ class BlogController extends Controller
     {
         $web = GeneralSetting::first();
 
-        $blogs = Post::where('status','published')->orderBy('created_at','DESC')->paginate(15);
+        $blogs = Post::where('status','published')->orderBy('created_at','DESC')->paginate(10);
 
         if ($request->ajax()) {
             return response()->json([
@@ -39,6 +39,32 @@ class BlogController extends Controller
         $web = GeneralSetting::first();
 
         $blog = Post::where('slug',$slug)->firstOrFail();
+        $visitorIdentifier = null;
+
+        // Check if the user is logged in or not
+        if (auth()->check()) {
+            // Logged-in user
+            $userId = auth()->id();
+            $visitorIdentifier = $blog->viewers()->where('user_id', $userId)->first();
+
+            if (!$visitorIdentifier) {
+                // Add user as viewer
+                $blog->viewers()->create([
+                    'user_id' => $userId,
+                ]);
+            }
+        } else {
+            // Guest user: track by IP address
+            $ipAddress = request()->ip();
+            $visitorIdentifier = $blog->viewers()->where('ip_address', $ipAddress)->first();
+
+            if (!$visitorIdentifier) {
+                // Add IP as viewer
+                $blog->viewers()->create([
+                    'ip_address' => $ipAddress,
+                ]);
+            }
+        }
 
         return view('home.resources.blog_detail')
             ->with([
