@@ -58,8 +58,13 @@
 
                 <ul class="sidemenu-nav-second-level">
                     <li>
-                        <a href="inbox">
-                            <span class="menu-title">Inbox</span>
+                        <a href="{{route('admin.our-products')}}">
+                            <span class="menu-title">Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.our-products.new')}}">
+                            <span class="menu-title">Add Product</span>
                         </a>
                     </li>
                 </ul>
@@ -67,14 +72,19 @@
 
             <li>
                 <a href="#" class="has-arrow box-style">
-                    <i class="ri-award-line"></i>
-                    <span class="menu-title">Projects</span>
+                    <i class="ri-account-pin-box-fill"></i>
+                    <span class="menu-title">Careers</span>
                 </a>
 
                 <ul class="sidemenu-nav-second-level">
                     <li>
-                        <a href="inbox">
-                            <span class="menu-title">Inbox</span>
+                        <a href="{{route('admin.job.index')}}">
+                            <span class="menu-title">Jobs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.applications.index')}}">
+                            <span class="menu-title">Applications</span>
                         </a>
                     </li>
                 </ul>
@@ -113,6 +123,21 @@
             </li>
 
             <li class="nav-item-title">Company</li>
+
+            <li>
+                <a href="#" class="has-arrow box-style">
+                    <i class="ri-award-line"></i>
+                    <span class="menu-title">Projects</span>
+                </a>
+
+                <ul class="sidemenu-nav-second-level">
+                    <li>
+                        <a href="inbox">
+                            <span class="menu-title">Inbox</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
 
             <li>
                 <a href="#" class="has-arrow box-style">

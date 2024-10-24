@@ -15,20 +15,4 @@ class OurProduct extends Model
     {
         return $this->status === 'active';
     }
-
-    /**
-     * Get a formatted list of product features.
-     */
-    public function formattedFeatures()
-    {
-        return collect($this->features)->implode(', ');
-    }
-
-    /**
-     * Check if the product has a perpetual license.
-     */
-    public function isPerpetualLicense()
-    {
-        return $this->license_type === 'perpetual';
-    }
 }
