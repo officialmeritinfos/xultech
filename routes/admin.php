@@ -25,5 +25,5 @@ Route::get('our-products/{id}/edit',[OurProductController::class,'editProduct'])
 Route::get('careers/job/index',[JobController::class,'landingPage'])->name('job.index');
 Route::get('careers/job/new',[JobController::class,'newJob'])->name('job.new');
 Route::get('careers/job/{id}/edit',[JobController::class,'editJob'])->name('job.edit');
-//Applications
-Route::get('careers/applications/index',[ApplicationController::class,'landingPage'])->name('applications.index');
+//Submissions
+Route::get('careers/applications/index/{job?}',[ApplicationController::class,'landingPage'])->name('applications.index');

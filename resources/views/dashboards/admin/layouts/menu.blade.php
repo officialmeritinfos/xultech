@@ -82,11 +82,6 @@
                             <span class="menu-title">Jobs</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="{{route('admin.applications.index')}}">
-                            <span class="menu-title">Applications</span>
-                        </a>
-                    </li>
                 </ul>
             </li>
 

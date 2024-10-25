@@ -13,7 +13,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class SendApplicantMail extends Mailable
+class SendApplicantRejectMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $job;
@@ -37,7 +37,7 @@ class SendApplicantMail extends Mailable
     {
         return new Envelope(
             from: new Address($this->settings->sender_email,$this->settings->name),
-            subject: 'Application Update - '.$this->settings->name,
+            subject: $this->settings->name.'- Application Update',
         );
     }
 
@@ -47,11 +47,13 @@ class SendApplicantMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.notify_applicant_mail',
+            view: 'emails.job_rejection_mail',
             with: [
-                'applicant' => $this->submission->name,
+                'candidateName' => $this->submission->name,
                 'job' => $this->job->title,
                 'web'=>$this->settings,
+                'senderPosition'=>'Human Resource Department',
+
             ]
         );
     }

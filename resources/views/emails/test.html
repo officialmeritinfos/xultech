@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .content {
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: #4CAF50;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+            .header, .content, .footer {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        Application Update - {{config('app.name')}}
+    </div>
+    <div class="content">
+        <p>Dear <strong>{{ $candidateName }}</strong>,</p>
+        <p>Thank you for your interest in joining the XulTech team and for taking the time to apply for the <strong>{{ $job }}</strong> position. We truly appreciate the effort you put into your application and the insights you shared about your experience and skills.</p>
+        <p>After careful consideration, we have decided to move forward with another candidate whose qualifications more closely align with our current needs for this role. This decision was not easy, as your application demonstrated impressive talent and dedication.</p>
+        <p>We encourage you to stay connected with XulTech for future opportunities that might be a great fit. We would love to keep your profile on file for any roles that better align with your skillset and career goals.</p>
+        <p>Thank you once again for your interest in XulTech, and we wish you all the best in your career journey. Should you have any questions or need feedback on your application, please feel free to reach out.</p>
+        <p>Warm regards,</p>
+        <p>
+            {{ $senderPosition }}<br>
+            {{config('app.name')}}</p>
+    </div>
+    <div class="footer">
+        © {{config('app.name')}} - All rights reserved.
+    </div>
+</div>
+</body>
+</html>
