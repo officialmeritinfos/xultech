@@ -681,7 +681,7 @@ Home 9  : Content Section
                         <div class="col-lg-4 col-md-6 col-sm-8">
                             <div class="blog-card h-100">
                                 <div class="blog-card__image">
-                                    <img src="i{{$blog->featuredImage}}" alt="image alt">
+                                    <img src="{{$blog->featuredImage}}" alt="image alt">
                                     <a href="#" class="blog-card__badge">{{$blog->category}}</a>
                                 </div>
                                 <div class="blog-card__body">
