@@ -682,7 +682,7 @@ Home 9  : Content Section
                             <div class="blog-card h-100">
                                 <div class="blog-card__image">
                                     <img src="{{$blog->featuredImage}}" alt="image alt">
-                                    <a href="#" class="blog-card__badge">{{$blog->category}}</a>
+                                    <a href="{{route('resources.blogs.category',['category'=>$blog->category])}}" class="blog-card__badge">{{$blog->category}}</a>
                                 </div>
                                 <div class="blog-card__body">
                                     <div class="blog-card__meta">
