@@ -9,6 +9,7 @@
 <meta name="language" content="English">
 <meta name="author" content="{{config('app.name')}}">
 
+<script id="pixel-chaty" async="true" src="https://cdn.chaty.app/pixel.js?id=Oo46o0tG"></script>
 <!-- Open Graph / Facebook -->
 <meta property="og:title" content="{{$pageName}} - {{$siteName}}">
 <meta property="og:description" content="{{$web->description}}">
