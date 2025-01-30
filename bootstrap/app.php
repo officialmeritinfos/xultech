@@ -24,7 +24,7 @@ return Application::configure(basePath: dirname(__DIR__))
         }
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->append(\App\Http\Middleware\HotlinkProtection::class);
+//        $middleware->append(\App\Http\Middleware\HotlinkProtection::class);
 
         $middleware->alias([
             'isAdmin' => \App\Http\Middleware\EnsureIsAdmin::class,
