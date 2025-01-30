@@ -73,10 +73,8 @@
                             <h3 class="feature-card__title">Visit Us</h3>
                             <p>
                                 Drop by and say Hello to the Team at: <br/>
-                                <strong>
-                                    {{ $web->address }}
-                                </strong><br/>
-
+                                <strong>22 Edozie Street, Uwani, Enugu, Nigeria.</strong><br/>
+                                {{ $web->address }}
                             </p>
                         </div>
                     </div>
