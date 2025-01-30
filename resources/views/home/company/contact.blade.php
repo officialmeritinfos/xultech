@@ -73,9 +73,10 @@
                             <h3 class="feature-card__title">Visit Us</h3>
                             <p>
                                 Drop by and say Hello to the Team at: <br/>
-                                <strong>22 Edozie Street, Uwani, Enugu, Nigeria.</strong><br/>
-                                <b>Head Office:</b>
-                                {{ $web->address }}
+                                <strong>
+                                    {{ $web->address }}
+                                </strong><br/>
+
                             </p>
                         </div>
                     </div>
