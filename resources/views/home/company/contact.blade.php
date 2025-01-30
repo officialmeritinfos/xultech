@@ -64,6 +64,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4 col-md-6" data-aos-duration="1000" data-aos="fade-left" data-aos-delay="">
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <img src="{{asset('home/image/contact-details/feature-icon-3.svg')}}" alt="image alt">
+                        </div>
+                        <div class="feature-card__body">
+                            <h3 class="feature-card__title">Visit Us</h3>
+                            <p>
+                                Drop by and say Hello to the Team at: <br/>
+                                <strong>22 Edozie Street, Uwani, Enugu, Nigeria.</strong><br/>
+                                <b>Head Office:</b>
+                                {{ $web->address }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
