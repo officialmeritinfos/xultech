@@ -74,7 +74,7 @@
                             <p>
                                 Drop by and say Hello to the Team at: <br/>
                                 <strong>22 Edozie Street, Uwani, Enugu, Nigeria.</strong><br/>
-                                {!! $web->address !!} }
+                                {!! $web->address !!}
                             </p>
                         </div>
                     </div>
