@@ -8,6 +8,10 @@ class OurProduct extends Model
 {
     protected $guarded = [];
 
+    protected $casts = [
+        'media_files' => 'array', // Cast media_files to an array
+    ];
+
     /**
      * Check if the product is active.
      */

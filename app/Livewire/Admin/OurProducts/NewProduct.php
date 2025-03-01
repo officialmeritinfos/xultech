@@ -68,7 +68,7 @@ class NewProduct extends Component
                 'website' => $this->website,
                 'icon_path' => $icon,
                 'features' => $this->features,
-                'media_files' => json_encode($uploadedFiles),
+                'media_files' => $uploadedFiles,
                 'versions' => $this->versions,
             ]);
             if ($product) {
